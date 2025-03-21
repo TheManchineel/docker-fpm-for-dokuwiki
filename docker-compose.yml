@@ -1,0 +1,9 @@
+services:
+  dokuwiki:
+    image: ghcr.io/themanchineel/docker-fpm-for-dokuwiki:latest
+    ports:
+      - 9000:9000
+    volumes:
+      - /var/www/dokuwiki/:/var/www/dokuwiki
+    environment:
+      ALLOWED_CLIENTS: "172.18.0.1"
